@@ -481,7 +481,7 @@ function getSortedScheduleDates(scheduleLike) {
 }
 
 function ListPage() {
-  const API_BASE = "http://localhost:4000";
+  const API_BASE = "https://hospital-managementserver.onrender.com";
 
   const [doctors, setDoctors] = useState([]);
   const [expanded, setExpanded] = useState(null);
