@@ -4,7 +4,7 @@ import { useMemo } from 'react'
 import { ChevronRight, CircleChevronDown, CircleChevronUp, Medal, MousePointer2Off, Search } from 'lucide-react'
 import { Link } from 'react-router-dom'
 const DoctorsPage = () => {
-  const API_BASE = 'http://localhost:4000'
+  const API_BASE = 'https://hospital-managementserver.onrender.com'
   const [allDoctors, setAllDoctors] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
