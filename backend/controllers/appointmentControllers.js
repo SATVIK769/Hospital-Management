@@ -610,15 +610,20 @@ export const getAppointmentsByDoctor = async(req, res) => {
 
 // 02:45:00
 
-export async function getRegisteredUserCount(req, res){
-  try{
+export async function getRegisteredUserCount(req, res) {
+  try {
     const totalUsers = await clerkClient.users.getCount();
-    return res.status(500).json({success: false, message: "Server error"});
+    return res.json({
+      success: true,
+      count: totalUsers,
+    });
+  } catch (err) {
+    console.error("getRegisteredUserCount Error:", err);
+    return res.status(500).json({
+      success: false,
+      message: "Failed to fetch user count",
+    });
   }
-  catch (err) {
-        console.error("getRegisteredUserCount Error:", err);
-        return res.status(500).json({ success: false, message: "Server error" });
-    }
 }
 
 export default{
