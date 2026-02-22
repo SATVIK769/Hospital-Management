@@ -1,0 +1,36 @@
+# Node modules (for all folders)
+node_modules/
+**/node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files (keep secrets out of Git)
+.env
+**/.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build outputs (frontend/admin)
+dist/
+build/
+
+# Vite cache
+.vite/
+
+# IDE / OS files
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Optional: coverage reports
+coverage/
