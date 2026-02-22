@@ -4,7 +4,7 @@ import { useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import { Calendar, Search, X } from 'lucide-react';
 
-const API_BASE = "http://localhost:4000";
+const API_BASE = "https://hospital-managementserver.onrender.com";
 
 function parseDateTime(date, time) {
   return new Date(`${date}T${time}:00`);
