@@ -15,7 +15,7 @@ appointmentRouter.get("/me", clerkMiddleware(), requireAuth(), getAppointmentsBy
 appointmentRouter.get("/doctor/:doctorId", getAppointmentsByDoctor);
 
 appointmentRouter.post("/:id/cancel", cancelAppointment);
-appointmentRouter.get("patients/count", getRegisteredUserCount);
+appointmentRouter.get("/patients/count", getRegisteredUserCount);
 appointmentRouter.put("/:id", updateAppointment);
 
 export default appointmentRouter;
