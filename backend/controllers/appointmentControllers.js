@@ -103,7 +103,7 @@ export const getAppointments = async (req, res) => {
 export const getAppointmentsByPatient = async (req, res) => {
   try {
     const queryCreatedBy = req.query.createdBy || null;
-    const clerkUserId = req.auth?.userId || null;
+    const clerkUserId = resolveClerkUserId(req);
     const resolvedCreatedBy = queryCreatedBy || clerkUserId || null;
     console.log(
       "resolvedCreatedBy (query or req.auth.userId):",
@@ -116,7 +116,7 @@ export const getAppointmentsByPatient = async (req, res) => {
       });
     }
     const filter = {};
-    if (!resolvedCreatedBy) filter.createdBy = resolvedCreatedBy;
+    if (resolvedCreatedBy) filter.createdBy = resolvedCreatedBy;
     if (req.query.mobile) filter.mobile = req.query.mobile;
 
     const appointments = await Appointment.find(filter)
@@ -418,7 +418,7 @@ export const confirmPayment = async(req, res) => {
             success: false,
             messasge: "Invalid session"
         });
-        if(!session.payment_status !== "paid"){
+        if(session.payment_status !== "paid"){
             return res.status(400).json({
                 success: false,
                 message: "Payment not completed."
