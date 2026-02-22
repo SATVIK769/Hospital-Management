@@ -3,7 +3,7 @@ import { addServiceStyles } from '../assets/dummyStyles'
 import { AlertTriangle, Calendar, CheckCircle, Clock, Image, Plus, Trash2, XCircle } from 'lucide-react';
 import { useParams } from "react-router-dom";
 const AddService=()=> {
-     const API_BASE = "http://localhost:4000";
+     const API_BASE = "https://hospital-managementserver.onrender.com";
       const { serviceId } = useParams();
       const fileRef = useRef(null);
   const [imagePreview, setImagePreview] = useState(null);
