@@ -77,7 +77,7 @@ const Footer = () => {
                             </div>
                             <div>
                                 <h2 className={footerStyles.companyName}>
-                                    MediCare
+                                    MediFlow
 
                                 </h2>
                                 <p className={footerStyles.companyTagline}>
