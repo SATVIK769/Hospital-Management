@@ -233,7 +233,7 @@ const Footer = () => {
                 <div className={footerStyles.bottomSection}>
                     <div className={footerStyles.copyright}>
                         <span>
-                            &copy;{currentYear} MediCare HealthCare.
+                            &copy;{currentYear} MediFlow HealthCare.
                         </span>
                      
 
