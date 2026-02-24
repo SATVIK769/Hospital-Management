@@ -32,7 +32,7 @@ const Banner = () => {
                                 <h1 className={bannerStyles.title}>
                                     Medi
                                     <span className={bannerStyles.titleGradient}>
-                                        Care+
+                                        Node+
 
                                     </span>
 
