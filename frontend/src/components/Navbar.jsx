@@ -87,7 +87,7 @@ const Navbar = () => {
            </div>
             <div className={navbarStyles.logoTextContainer}>
               <h1 className={navbarStyles.logoTitle}>
-                Medicare
+                MediFlow
               </h1>
               <p className={navbarStyles.logoSubtitle}>
                 Healthcare Solutions
