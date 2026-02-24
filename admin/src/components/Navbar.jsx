@@ -157,7 +157,7 @@ export const Navbar = () => {
                 <div className={ns.logoContainer}>
                     <img src={logoImg} alt="logo" className={ns.logoImage} />
                     <Link to="/">
-                        <div className={ns.logoLink}>MediCare</div>
+                        <div className={ns.logoLink}>MediFlow</div>
                         <div className={ns.logoSubtext}>Healthcare Solutions</div>
                     </Link>
                 </div>
